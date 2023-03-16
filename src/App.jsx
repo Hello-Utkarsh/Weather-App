@@ -3,13 +3,6 @@ import './App.css'
 import Background from './components/Background'
 import Details from './components/Details'
 import Temp_Detail from './components/Temp_Detail'
-const options = {
-  method: 'GET',
-  headers: {
-    'X-RapidAPI-Key': 'b29b1c7b8fmsh7f197b82064d086p15053djsn4f67bc342095',
-    'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
-  }
-};
 
 
 class App extends React.Component {

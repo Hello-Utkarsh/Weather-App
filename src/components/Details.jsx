@@ -1,6 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Details(props) {
+    const [search, setsearch] = useState("")
+    const handlechange = (event)=>{
+        setsearch(event.target.value)
+    }
+    const search_input = ()=>{
+        let inputed_txt = document.getElementById("input_txt")
+        if (inputed_txt.value != "" && inputed_txt.value != "Search") {
+            setsearch(inputed_txt.value)
+            // alert(inputed_txt.value)
+            alert(search)
+        }
+        else{
+            inputed_txt.value = "Search"
+        }
+    }
 
     return (
         <div className='w-1/4 h-[100vh] absolute top-0 right-0 opacity-60 z-0 bg-gray-800'>
@@ -11,9 +26,9 @@ export default function Details(props) {
 
                 <div className='flex pb-3'>
 
-                    <input type="text" defaultValue={"Search Loaction"} className='w-[76%] mx-[6%] text-gray-400 text-lg mt-[6.5vh] bg-gray-800 outline-0 border-b-2 border-gray-400' />
+                    <input type="text" id='input_txt' onChange={handlechange} defaultValue={"Search"} className='w-[76%] mx-[6%] text-gray-400 text-lg mt-[6.5vh] bg-gray-800 outline-0 border-b-2 border-gray-400' />
 
-                    <span className="material-symbols-outlined py-[2vh] h-[9vh] justify-center text-center w-[5vw] bg-cyan-200 items-center text-black" style={{ fontSize: "30px" }}>
+                    <span className="material-symbols-outlined py-[2vh] h-[9vh] justify-center text-center w-[5vw] bg-cyan-200 items-center cursor-pointer text-black" style={{ fontSize: "30px" }} onClick = {search_input} >
                         search
                     </span>
 
