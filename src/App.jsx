@@ -3,6 +3,7 @@ import './App.css'
 import Background from './components/Background'
 import Details from './components/Details'
 import Temp_Detail from './components/Temp_Detail'
+import options from './components/apikey'
 
 function App() {
 
@@ -18,7 +19,6 @@ function App() {
     }
 
     fetchapi()
-    // getlocation()
 
   })
 
