@@ -12,12 +12,18 @@ function App() {
 
   useEffect(() => {
     const fetchapi = async () => {
-      const response = await fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${search}`, options)
-      const jsonresponse = await response.json()
-      setweather_details(jsonresponse)
+      const apiresponse = await fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${search}`, options)
+      const jsonresponse = await apiresponse.json()
+      if (apiresponse.status == "200") {
+        setweather_details(jsonresponse)
+      }
+      else{
+        alert("Please enter a valid place")
+      }
+      
+      
   
     }
-
     fetchapi()
 
   })
@@ -33,7 +39,9 @@ function App() {
     <div className="App">
 
       {!weather_details ? (
-        <h1>No Data Found</h1>
+        <div>
+          <h1>no data  found</h1>
+        </div>
       ) : (
         <div>
           <Temp_Detail temperature={weather_details.current.temp_c} location = {weather_details.location.name} localtime = {weather_details.location.localtime} condition = {weather_details.current.condition.text}/>
