@@ -3,31 +3,35 @@ import './App.css'
 import Background from './components/Background'
 import Details from './components/Details'
 import Temp_Detail from './components/Temp_Detail'
-import options from './components/apikey'
+// da60dbaa7e624ea49e8131829232103
+
 
 function App() {
 
   const [weather_details, setweather_details] = useState(null)
   const [search, setsearch] = useState("Varanasi")
+  const weatherapikey = import.meta.env.VITE_WEATHER_API
+
+  const fetchapi = async () => {
+    const apiresponse = await fetch(`http://api.weatherapi.com/v1/current.json?key=${weatherapikey}&q=${search}`)
+    const jsonresponse = await apiresponse.json()
+    if (apiresponse.status == "200") {
+      setweather_details(jsonresponse)
+    }
+    else{
+      alert("Please enter a valid place")
+    }
+    
+    
+
+  }
 
   useEffect(() => {
-    const fetchapi = async () => {
-      const apiresponse = await fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${search}`, options)
-      const jsonresponse = await apiresponse.json()
-      if (apiresponse.status == "200") {
-        setweather_details(jsonresponse)
-      }
-      else{
-        alert("Please enter a valid place")
-      }
-      
-      
-  
-    }
+    
+
     fetchapi()
 
-  })
-
+  }, [search])
  
   const getlocation = (place)=>{
    
