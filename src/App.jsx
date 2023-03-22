@@ -3,7 +3,6 @@ import './App.css'
 import Background from './components/Background'
 import Details from './components/Details'
 import Temp_Detail from './components/Temp_Detail'
-// da60dbaa7e624ea49e8131829232103
 
 
 function App() {
