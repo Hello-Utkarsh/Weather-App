@@ -12,7 +12,7 @@ function App() {
   const weatherapikey = import.meta.env.VITE_WEATHER_API
 
   const fetchapi = async () => {
-    const apiresponse = await fetch(`http://api.weatherapi.com/v1/current.json?key=${weatherapikey}&q=${search}`)
+    const apiresponse = await fetch(`https://api.weatherapi.com/v1/current.json?key=${weatherapikey}&q=${search}`)
     const jsonresponse = await apiresponse.json()
     if (apiresponse.status == "200") {
       setweather_details(jsonresponse)
