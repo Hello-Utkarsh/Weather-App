@@ -25,7 +25,7 @@ export default function Details(props) {
 
                 <div className='flex pb-3'>
 
-                    <input type="text" id='input_txt' onChange={handlechange} placeholder='Search For weather' className='w-[76%] mx-[6%] text-gray-400 text-lg mt-[6.5vh] bg-gray-800 outline-0 border-b-2 border-gray-400' />
+                    <input type="text" id='input_txt' onChange={handlechange}  className='w-[76%] mx-[6%] text-gray-400 text-lg mt-[6.5vh] bg-gray-800 outline-0 border-b-2 border-gray-400' />
 
                     <span className="material-symbols-outlined py-[2vh] h-[9vh] justify-center text-center w-[5vw] bg-cyan-200 items-center cursor-pointer text-black" style={{ fontSize: "30px" }} onClick={search_input} >
                         search
