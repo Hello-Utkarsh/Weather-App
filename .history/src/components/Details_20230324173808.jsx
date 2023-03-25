@@ -17,7 +17,7 @@ export default function Details(props) {
     }
 
     return (
-        <div className='w-1/4 max-md:w-2/5 max-sm:w-full h-[100vh] absolute top-0 right-0 opacity-60 z-0 bg-gray-800'>
+        <div className='w-1/4 h-[100vh] absolute top-0 right-0 opacity-60 z-0 bg-gray-800'>
 
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
@@ -25,9 +25,9 @@ export default function Details(props) {
 
                 <div className='flex pb-3'>
 
-                    <input type="text" id='input_txt' onChange={handlechange} placeholder='Search For weather' className='w-[76%] mx-[6%] text-gray-400 text-lg mt-[6.5vh] bg-gray-800 outline-0 border-b-2 border-gray-400' />
+                    <input type="text" id='input_txt' onChange={handlechange}  className='w-[76%] mx-[6%] text-gray-400 text-lg mt-[6.5vh] bg-gray-800 outline-0 border-b-2 border-gray-400' />
 
-                    <span className="material-symbols-outlined max-md: py-[2vh] h-24 justify-center text-center w-24 bg-cyan-200 items-center cursor-pointer text-black" style={{ fontSize: "30px" }} onClick={search_input} >
+                    <span className="material-symbols-outlined py-[2vh] h-[9vh] justify-center text-center w-[5vw] bg-cyan-200 items-center cursor-pointer text-black" style={{ fontSize: "30px" }} onClick={search_input} >
                         search
                     </span>
 
