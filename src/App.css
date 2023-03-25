@@ -1,0 +1,9 @@
+.atmosphere{
+    font-size: 60px;
+}
+
+@media screen and (max-width: 500px) {
+    .atmosphere{
+        font-size: 30px;
+    }
+}

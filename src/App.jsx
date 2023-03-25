@@ -7,7 +7,7 @@ import Temp_Detail from './components/Temp_Detail'
 
 function App() {
 
-  const [weather_details, setweather_details] = useState(null)
+  const [weather_details, setweather_details] = useState()
   const [search, setsearch] = useState("Varanasi")
   const weatherapikey = import.meta.env.VITE_WEATHER_API
 
