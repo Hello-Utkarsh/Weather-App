@@ -33,36 +33,36 @@ export default function Details(props) {
 
                 </div>
 
-                <div className='py-11 px-[6%]'>
+                <div className='py-11 px-[6%] max-[500px]:py-8'>
 
                     <h2 className='text-white font-bold'>Weather Details</h2>
 
-                    <div className='flex text-gray-400 justify-between w-3/4 pt-12 py-4 text-lg'>
+                    <div className='flex text-gray-400 justify-between w-3/4 max-[500px]:pt-8 pt-12 py-4 text-lg'>
                         <h3>Cloudy</h3>
                         <h3 className='text-white font-bold'>{props.cloudy}%</h3>
                     </div>
 
-                    <div className='flex text-gray-400 justify-between w-3/4 py-4 text-lg'>
+                    <div className='flex text-gray-400 justify-between max-[500px]:py-2 w-3/4 py-4 text-lg'>
                         <h3>Humidity</h3>
                         <h3 className='text-white font-bold'>{props.humidity}%</h3>
                     </div>
 
-                    <div className='flex text-gray-400 justify-between w-3/4 py-4 text-lg'>
+                    <div className='flex text-gray-400 justify-between max-[500px]:py-2 w-3/4 py-4 text-lg'>
                         <h3>Wind</h3>
                         <h3 className='text-white font-bold'>{props.wind_kmp}kmp/h</h3>
                     </div>
 
-                    <div className='flex text-gray-400 justify-between w-3/4 py-4 text-lg'>
+                    <div className='flex text-gray-400 max-[500px]:py-2 justify-between w-3/4 py-4 text-lg'>
                         <h3>Rain</h3>
                         <h3 className='text-white font-bold'>{props.precip_mm}mm</h3>
                     </div>
 
-                    <div className='flex text-gray-400 justify-between w-3/4 py-4 text-lg'>
+                    <div className='flex text-gray-400 max-[500px]:py-2 justify-between w-3/4 py-4 text-lg'>
                         <h3>Latitude</h3>
                         <h3 className='text-white font-bold'>{props.lat}</h3>
                     </div>
 
-                    <div className='flex text-gray-400 justify-between w-3/4 py-4 text-lg'>
+                    <div className='flex text-gray-400 max-[500px]:py-2 justify-between w-3/4 py-4 text-lg'>
                         <h3>Longitude</h3>
                         <h3 className='text-white font-bold'>{props.log}</h3>
                     </div>
